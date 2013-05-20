@@ -1,0 +1,53 @@
+<html>
+	<head></head>
+	<body>
+<span id='timer' style="font-size:300px;display:block;margin:0 auto;width:200px;"></span>
+<span id='exercise' style="font-size:100px;text-align:center;width:100%;display:block"></span>
+		<script type='text/javascript'>
+			var exerciseNr=0;
+			var exercises=[];
+			exercises[1] = "Jumping Jacks";
+			exercises[2] = "Wall Sit";
+			exercises[3] = "Push-Up";
+			exercises[4] = "Abdominal Crunch";
+			exercises[5] = "Step-up onto chair";
+			exercises[6] = "Squat";
+			exercises[7] = "Triceps dip on chair";
+			exercises[8] = "Plank";
+			exercises[9] = "High knees running in place";
+			exercises[10] = "Lunge";
+			exercises[11] = "Puash-up and rotation";
+			exercises[12] = "Side plank";
+			var countExercise=31;
+			var countBreak = 11;
+			var inPractice = true;
+			var myCount = countBreak;
+
+			var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+			document.getElementById("exercise").innerHTML=exercises[1];
+
+			function timer()
+			{
+				myCount=myCount-1;
+				if (myCount <= 0)
+				{
+					if(exerciseNr>=12) {
+						clearInterval(counter);
+						return;
+					}
+					exerciseNr = exerciseNr+1;
+					document.getElementById("exercise").innerHTML=exercises[exerciseNr];
+					if(inPractice) {
+						inPractice = false;
+						myCount = countExercise;
+					} else {
+						inPractice = true;
+						myCount = countBreak;
+					}
+				}
+				document.getElementById("timer").innerHTML=myCount; 
+			}
+</script>
+
+	</body>
+</html>

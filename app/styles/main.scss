@@ -1,0 +1,30 @@
+@import "compass_twitter_bootstrap";
+
+.start-workout-btn {
+	margin:  30px 0;
+}
+#countdown.inPractice {
+	.number {
+		color: red;
+	}
+	.exercise {
+		font-style: normal;
+		font-size: 100px;
+	}
+}
+#countdown {
+	display: block;
+	width: 100%;
+	font-size: 300px;
+	text-align: center;
+	margin: 0 auto;
+
+	.number {
+		font-size: 300px;
+	}
+	.exercise {
+		font-style: italic;
+		font-size: 25px;
+	}
+
+}
