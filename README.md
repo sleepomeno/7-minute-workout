@@ -1,4 +1,7 @@
 7-minute-workout
 ================
 
-7-minute workout web site
+Run this to get a glimpse of what this is all about:
+	grunt server
+
+
